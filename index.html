@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JUMPNEST | Premier Kids Indoor Trampoline & Soft Play Center</title>
+  <meta name="description" content="Hyderabad's top-rated indoor trampoline park and soft play club for kids aged 1–12. Enjoy interconnected trampolines, toddler foam pits, ninja tracks, birthday packages and parent lounge.">
+  <meta property="og:title" content="JUMPNEST | Kids Indoor Trampoline & Soft Play Center">
+  <meta property="og:description" content="Where boundless energy meets pure joy & parent peace of mind. Book play sessions and birthday parties online.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f3a35'/%3E%3Ccircle cx='30' cy='33' r='15' fill='none' stroke='%23d7a53d' stroke-width='6'/%3E%3Ccircle cx='46' cy='17' r='6' fill='%23c85a3f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="has-announcement">
+  <!-- TOP ANNOUNCEMENT & LIVE STATUS BAR -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="live-status">
+        <span class="live-dot"></span>
+        <span>Open Today: 10:00 AM — 8:00 PM · Nagole, Hyderabad · Walk-ins & Online Bookings Welcome</span>
+      </div>
+      <div class="announcement-links">
+        <a href="javascript:void(0)" onclick="openWaiverModal()">📝 Sign Digital Waiver</a>
+        <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        <a href="contact.html">📍 Directions & Parking</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- SITE HEADER -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo"></span>
+          <span>JUMPNEST</span>
+        </a>
+        <nav class="navlinks">
+          <a class="active" href="index.html">Home</a>
+          <a href="home2.html">Home 2</a>
+          <a href="attractions.html">Attractions</a>
+          <a href="passes.html">Passes & Pricing</a>
+          <a href="birthday.html">Birthdays</a>
+          <a href="about.html">About</a>
+          <a href="blogs.html">Play Guides</a>
+          <a href="contact.html">Contact</a>
+        <a class="mobile-extra" href="javascript:void(0)" onclick="openWaiverModal()">Sign Waiver</a><a class="mobile-extra" href="javascript:void(0)" onclick="toggleRTL()">Toggle RTL</a></nav>
+        <div class="nav-actions">
+          <button class="btn-waiver" onclick="openWaiverModal()" title="Fast check-in waiver">
+            <span>✍️</span>
+            <span>Sign Waiver</span>
+          </button>
+          <button class="btn btn-primary nav-cta" onclick="openBooking()">Book Now <span aria-hidden="true">&rarr;</span></button>
+          <button class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode" onclick="toggleTheme()">◐</button>
+          <button class="icon-btn rtl-toggle" title="Toggle right-to-left layout" aria-label="Toggle right-to-left layout" onclick="toggleRTL()">RTL</button>
+          <a class="btn btn-soft nav-signin" href="login.html">Sign In</a>
+          <button class="icon-btn mobile-toggle" aria-label="Open navigation" onclick="toggleMobile()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Kids Indoor Trampoline & Soft Play Club · Hyderabad</span>
+            <h1>Make room for the good kind of chaos.</h1>
+            <p>
+              JUMPNEST is a premium indoor play park built for energetic kids (ages 1–12), unhurried parents, and birthdays worth celebrating. Wall-to-wall trampolines, sensory soft mazes, foam pit drops, and a calm observation cafe.
+            </p>
+
+            <!-- INTERACTIVE QUICK BOOKING STRIP -->
+            <div class="hero-book-bar">
+              <div class="hero-book-item">
+                <label>Date</label>
+                <input type="date" id="hero-book-date" value="2026-10-29">
+              </div>
+              <div class="hero-book-item">
+                <label>Experience</label>
+                <select id="hero-book-exp">
+                  <option value="standard-90">Standard Jump (90 Mins) — ₹699</option>
+                  <option value="quick-60">Quick Jump (60 Mins) — ₹499</option>
+                  <option value="toddler-60">Toddler Morning (60 Mins) — ₹399</option>
+                  <option value="family-90">Weekend Family Pass (4 Jumpers) — ₹2,199</option>
+                </select>
+              </div>
+              <div class="hero-book-item">
+                <label>Jumpers</label>
+                <select id="hero-book-jumpers">
+                  <option value="1">1 Child</option>
+                  <option value="2" selected>2 Children</option>
+                  <option value="3">3 Children</option>
+                  <option value="4">4 Children</option>
+                  <option value="5">5+ Group</option>
+                </select>
+              </div>
+              <div>
+                <button type="button" class="btn btn-primary" style="width:100%; min-height:44px; padding:12px 20px" onclick="checkHeroBooking()">
+                  Check Slots & Book
+                </button>
+              </div>
+            </div>
+
+            <!-- TRUST & SAFETY HIGHLIGHTS -->
+            <div class="trust-strip">
+              <div class="trust-item">
+                <span class="icon">⭐</span>
+                <span><b>4.9/5</b> (1,450+ Parent Reviews)</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">🛡️</span>
+                <span>Concealed Springs & Soft Airbags</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">🧼</span>
+                <span>Sanitized Every 90 Mins</span>
+              </div>
+              <div class="trust-item">
+                <span class="icon">☕</span>
+                <span>Sound-Dampened Parent Lounge</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO VISUAL WITH HIGH-RES RELEVANT IMAGE -->
+          <div class="hero-visual">
+            <div class="hero-photo">
+              <img src="https://images.pexels.com/photos/19875328/pexels-photo-19875328.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Children playing on slides and in a colourful indoor play area">
+            </div>
+            <div class="hero-badge">
+              <strong>Parent-First</strong>
+              <span>Live slot capacity, online waiver check-in & 360° cafe view of all courts.</span>
+            </div>
+            <div class="hero-stamp">
+              MOVE<br>LOUD.<br>PLAY SAFE.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TICKER MARQUEE -->
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>WALL-TO-WALL TRAMPOLINES <i>✦</i></span>
+          <span>MULTI-TIER SOFT PLAY <i>✦</i></span>
+          <span>TODDLER SENSORY MAZE <i>✦</i></span>
+          <span>NINJA STUNT TRACK <i>✦</i></span>
+          <span>SLAM DUNK HOOPS <i>✦</i></span>
+          <span>BIRTHDAY CLUB <i>✦</i></span>
+          <span>PARENT LOUNGE & ESPRESSO <i>✦</i></span>
+          <span>100% SANITIZED COURTS <i>✦</i></span>
+          <span>WALL-TO-WALL TRAMPOLINES <i>✦</i></span>
+          <span>MULTI-TIER SOFT PLAY <i>✦</i></span>
+          <span>TODDLER SENSORY MAZE <i>✦</i></span>
+          <span>NINJA STUNT TRACK <i>✦</i></span>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE ATTRACTIONS SHOWCASE -->
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Play, Thoughtfully</span>
+              <h2>Spaces with a reason to move.</h2>
+            </div>
+            <p>
+              Every zone is purposefully engineered: children have the freedom to jump and challenge their bodies while parents can understand safety rules and monitor the space at a glance.
+            </p>
+          </div>
+
+          <!-- INTERACTIVE ZONE FILTERS -->
+          <div class="zone-filters">
+            <button class="zone-filter-btn active" onclick="filterZones('all', this)">All Play Zones (6)</button>
+            <button class="zone-filter-btn" onclick="filterZones('toddler', this)">Toddlers (1–4 Yrs)</button>
+            <button class="zone-filter-btn" onclick="filterZones('explorer', this)">Explorers (3–8 Yrs)</button>
+            <button class="zone-filter-btn" onclick="filterZones('active', this)">High Energy (6–12+ Yrs)</button>
+            <button class="zone-filter-btn" onclick="filterZones('parent', this)">Parents & Cafe</button>
+          </div>
+
+          <!-- 6 RICH ZONE CARDS -->
+          <div class="zone-grid">
+            <!-- 1. Airbound Arena -->
+            <article class="zone-card" data-category="all active">
+              <div class="zone-thumb">
+                <img src="https://images.pexels.com/photos/40500091/pexels-photo-40500091.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Children jumping on trampolines in a bright play park">
+                <div class="zone-badge-wrap">
+                  <span class="zone-age-badge">Ages 6–12+</span>
+                  <span class="zone-energy-badge">⚡ High Energy</span>
+                </div>
+              </div>
+              <div class="zone-body">
+                <h3>Airbound Trampoline Arena</h3>
+                <p>30+ interconnected trampoline mats, angled bounce walls, and tumble tracks for endless high-flying gymnastics and jumping tricks.</p>
+                <div class="zone-features">
+                  <span>Concealed spring beds</span>
+                  <span>1 Jumper per mat rule</span>
+                  <span>Full marshal oversight</span>
+                </div>
+                <div class="zone-footer">
+                  <span style="font-size:12px; font-weight:800; color:var(--accent)">Included in all passes</span>
+                  <button class="btn btn-soft" style="padding:7px 14px; font-size:11px" onclick="openBooking({experience:'standard-90'})">Book Zone</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Cloud Club Soft Play -->
+            <article class="zone-card" data-category="all explorer">
+              <div class="zone-thumb">
+                <img src="https://images.pexels.com/photos/5488878/pexels-photo-5488878.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Child sliding down a colourful soft play slide">
+                <div class="zone-badge-wrap">
+                  <span class="zone-age-badge">Ages 3–8</span>
+                  <span class="zone-energy-badge">✨ Moderate Pace</span>
+                </div>
+              </div>
+              <div class="zone-body">
+                <h3>Cloud Club Soft Play Maze</h3>
+                <p>A 3-level cushioned jungle gym featuring padded obstacles, sensory balance beams, double spiral slides, and a giant foam ball pool.</p>
+                <div class="zone-features">
+                  <span>Triple-padded safety netting</span>
+                  <span>Spiral tube slides</span>
+                  <span>Ball fountain</span>
+                </div>
+                <div class="zone-footer">
+                  <span style="font-size:12px; font-weight:800; color:var(--accent)">Parent sightlines built-in</span>
+                  <button class="btn btn-soft" style="padding:7px 14px; font-size:11px" onclick="openBooking({experience:'standard-90'})">Book Zone</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Little Loop Toddler Sanctuary -->
+            <article class="zone-card" data-category="all toddler">
+              <div class="zone-thumb">
+                <img src="https://images.pexels.com/photos/19735065/pexels-photo-19735065.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Toddler playing with a balloon in a padded soft play room">
+                <div class="zone-badge-wrap">
+                  <span class="zone-age-badge">Ages 1–4</span>
+                  <span class="zone-energy-badge" style="background:#b5dfd0">🌱 Gentle Discovery</span>
+                </div>
+              </div>
+              <div class="zone-body">
+                <h3>Little Loop Toddler Sanctuary</h3>
+                <p>Dedicated low-height haven gated away from big kids. Soft foam crawl tunnels, sensory textured stepping stones, and low-rebound baby bounce mats.</p>
+                <div class="zone-features">
+                  <span>Gated toddler enclosure</span>
+                  <span>1 Free adult spectator</span>
+                  <span>Hospital-grade sanitized</span>
+                </div>
+                <div class="zone-footer">
+                  <span style="font-size:12px; font-weight:800; color:var(--green)">₹399 Morning Sessions</span>
+                  <button class="btn btn-soft" style="padding:7px 14px; font-size:11px" onclick="openBooking({experience:'toddler-60'})">Book Toddler</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Ninja Warrior Stunt & Airbag Drop -->
+            <article class="zone-card" data-category="all active">
+              <div class="zone-thumb">
+                <img src="https://images.pexels.com/photos/5916169/pexels-photo-5916169.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Children climbing an indoor climbing wall with safety gear">
+                <div class="zone-badge-wrap">
+                  <span class="zone-age-badge">Ages 7–14</span>
+                  <span class="zone-energy-badge">🔥 Challenge Zone</span>
+                </div>
+              </div>
+              <div class="zone-body">
+                <h3>Ninja Track & Giant Airbag</h3>
+                <p>Agility course with balance logs, swinging ropes, monkey bars, and a mega pneumatic stunt airbag for safe leap landings from elevated launch points.</p>
+                <div class="zone-features">
+                  <span>Zero-impact airbag cushion</span>
+                  <span>Dual agility lanes</span>
+                  <span>Marshal timed runs</span>
+                </div>
+                <div class="zone-footer">
+                  <span style="font-size:12px; font-weight:800; color:var(--accent)">Challenge markers</span>
+                  <button class="btn btn-soft" style="padding:7px 14px; font-size:11px" onclick="openBooking({experience:'standard-90'})">Book Zone</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Sky Slam & Dodgeball Court -->
+            <article class="zone-card" data-category="all active">
+              <div class="zone-thumb">
+                <img src="https://images.pexels.com/photos/12574354/pexels-photo-12574354.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Child shooting a basketball on an indoor court">
+                <div class="zone-badge-wrap">
+                  <span class="zone-age-badge">Ages 6–12</span>
+                  <span class="zone-energy-badge">⚡ Team Play</span>
+                </div>
+              </div>
+              <div class="zone-body">
+                <h3>Sky Slam Dunk & Dodgeball Stadium</h3>
+                <p>Trampoline-assisted basketball hoops adjusted for junior dunkers, plus a netted dodgeball court for high-energy friendly tournaments.</p>
+                <div class="zone-features">
+                  <span>Soft foam dodgeballs</span>
+                  <span>Adjustable rim heights</span>
+                  <span>Referee host available</span>
+                </div>
+                <div class="zone-footer">
+                  <span style="font-size:12px; font-weight:800; color:var(--accent)">Social family matches</span>
+                  <button class="btn btn-soft" style="padding:7px 14px; font-size:11px" onclick="openBooking({experience:'standard-90'})">Book Zone</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. The Nest Parent Cafe Lounge -->
+            <article class="zone-card" data-category="all parent">
+              <div class="zone-thumb">
+                <img src="https://images.pexels.com/photos/30948318/pexels-photo-30948318.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Warm modern cafe lounge with wooden tables and plants">
+                <div class="zone-badge-wrap">
+                  <span class="zone-age-badge">Parents & Guests</span>
+                  <span class="zone-energy-badge" style="background:#e8dfcf">☕ Relax & Work</span>
+                </div>
+              </div>
+              <div class="zone-body">
+                <h3>The Nest Cafe & Observation Deck</h3>
+                <p>An acoustic-managed sanctuary overlooking the courts. Enjoy specialty barista coffee, high-speed Wi-Fi, work desks, and healthy organic treats for kids.</p>
+                <div class="zone-features">
+                  <span>Acoustic sound dampening</span>
+                  <span>Direct court sightlines</span>
+                  <span>Artisan espresso & juices</span>
+                </div>
+                <div class="zone-footer">
+                  <span style="font-size:12px; font-weight:800; color:var(--green)">Free Parent Entry</span>
+                  <a class="btn btn-soft" style="padding:7px 14px; font-size:11px" href="contact.html">View Amenities</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- USER JOURNEY: 5 SMOOTH STEPS -->
+      <section style="background:var(--surface2)">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Zero Friction Journey</span>
+              <h2>How your family visit works.</h2>
+            </div>
+            <p>
+              We designed the entire process so parents never stand in long queues or deal with confusing forms. From booking to jumping in 5 effortless steps.
+            </p>
+          </div>
+
+          <div class="journey-grid">
+            <div class="journey-step">
+              <div class="journey-num">01</div>
+              <h3>Book Online</h3>
+              <p>Select your preferred day, session duration (60 or 90m), and see live capacity before leaving home.</p>
+            </div>
+
+            <div class="journey-step featured">
+              <div class="journey-num">02</div>
+              <h3>Sign Waiver</h3>
+              <p>Fill out the digital waiver once online from your phone. Receive an express pass to skip check-in lines.</p>
+            </div>
+
+            <div class="journey-step">
+              <div class="journey-num">03</div>
+              <h3>Arrive 15m Early</h3>
+              <p>Grab your reusable Jumpnest anti-slip grip socks at reception and store shoes in secure digital lockers.</p>
+            </div>
+
+            <div class="journey-step">
+              <div class="journey-num">04</div>
+              <h3>Marshal Briefing</h3>
+              <p>Our enthusiastic court marshals guide jumpers through a quick 2-minute safety walkthrough.</p>
+            </div>
+
+            <div class="journey-step">
+              <div class="journey-num">05</div>
+              <h3>Jump & Relax</h3>
+              <p>Kids explore thrilling bounce zones while parents enjoy espresso and panoramic views from the cafe.</p>
+            </div>
+          </div>
+
+          <div style="text-align:center; margin-top:30px">
+            <button class="btn btn-primary" onclick="openBooking()">Reserve Your Family Session Now</button>
+            <button class="btn btn-soft" style="margin-left:8px" onclick="openWaiverModal()">Sign Digital Waiver (30s)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS & CAPACITY SECTION -->
+      <section>
+        <div class="container">
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>6</strong>
+              <span>Unique Play Environments</span>
+            </div>
+            <div class="stat">
+              <strong>1:8</strong>
+              <span>Marshal-to-Jumper Safety Ratio</span>
+            </div>
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Concealed Springs & Soft Airbags</span>
+            </div>
+            <div class="stat">
+              <strong>30 sec</strong>
+              <span>Paperless Online Waiver Check-In</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAFETY & HYGIENE VISIBLE (DARK PANEL) -->
+      <section>
+        <div class="container dark-panel safety-grid">
+          <div>
+            <span class="eyebrow" style="color:#d7a53d">Safety First, Always</span>
+            <h2>Confidence is built into every bounce.</h2>
+            <p>
+              We take safety as seriously as fun. Our center adheres to European (EN 1176) and ASTM international playground safety standards, with continuous supervision and certified staff.
+            </p>
+            <div style="margin-top:24px">
+              <button class="btn btn-gold" onclick="openWaiverModal()">✍️ Complete Express Waiver Online</button>
+            </div>
+          </div>
+          <div class="check-grid">
+            <div class="check">
+              <b>Mandatory Grip Socks</b>
+              <span>Custom rubberized traction socks prevent slipping on trampoline beds.</span>
+            </div>
+            <div class="check">
+              <b>Certified First-Aid Marshals</b>
+              <span>Every court team member is trained in active child supervision & CPR.</span>
+            </div>
+            <div class="check">
+              <b>Hospital-Grade Sanitization</b>
+              <span>UV-C light fogging and touchpoint sterilization between every session.</span>
+            </div>
+            <div class="check">
+              <b>Dedicated Age Enclosures</b>
+              <span>Toddlers (1–4) have their own gated zone to prevent bigger-kid collisions.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASSES & PRICING -->
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Passes & Pricing</span>
+              <h2>Transparent pricing. Maximum value.</h2>
+            </div>
+            <p>
+              Simple rates with zero hidden fees. Choose a single session or save up to 35% with our multi-visit family passes tracked right in your parent dashboard.
+            </p>
+          </div>
+
+          <div class="price-grid">
+            <!-- Pass 1 -->
+            <article class="price-card">
+              <span class="pill">Weekdays & Weekends</span>
+              <h3>Single Play Session</h3>
+              <div class="price">₹699 <small>/ 90 mins</small></div>
+              <p>Full access to all 5 active play arenas for one child.</p>
+              <ul>
+                <li>90 minutes of active play</li>
+                <li>Access to all trampoline & soft play zones</li>
+                <li>Free admission for 2 parent spectators</li>
+                <li>Free digital locker access</li>
+              </ul>
+              <button class="btn btn-soft" style="width:100%" onclick="openBooking({experience:'standard-90'})">Book Single Session</button>
+            </article>
+
+            <!-- Pass 2: FEATURED -->
+            <article class="price-card featured">
+              <span class="tag">MOST POPULAR · SAVE 30%</span>
+              <span class="pill" style="background:rgba(255,255,255,.15); color:#fff">10 Visits · 90 Days</span>
+              <h3>Family Loop Pass</h3>
+              <div class="price">₹2,799 <small>/ 10 visits</small></div>
+              <p>Our best value pass for families who visit twice a month or have siblings.</p>
+              <ul>
+                <li>10 full 90-minute play sessions</li>
+                <li>Shareable across siblings</li>
+                <li>Real-time visit ledger in parent dashboard</li>
+                <li>Priority weekend booking slots</li>
+                <li>2 pairs of complimentary grip socks</li>
+              </ul>
+              <button class="btn btn-gold" style="width:100%" onclick="openBooking({experience:'pass-holder'})">Get Family Pass</button>
+            </article>
+
+            <!-- Pass 3 -->
+            <article class="price-card">
+              <span class="pill">5 Visits · 45 Days</span>
+              <h3>Weekend Pair Pass</h3>
+              <div class="price">₹1,499 <small>/ 5 visits</small></div>
+              <p>Flexible play pack designed for occasional weekend treats.</p>
+              <ul>
+                <li>5 sessions (90 mins each)</li>
+                <li>Valid on all Saturdays & Sundays</li>
+                <li>Instant pass tracking online</li>
+                <li>10% discount on birthday parties</li>
+              </ul>
+              <button class="btn btn-soft" style="width:100%" onclick="openBooking({experience:'standard-90'})">Get 5-Visit Pass</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIRTHDAYS HIGHLIGHT -->
+      <section class="container story">
+        <div class="story-photo">
+          <img src="https://images.pexels.com/photos/7600383/pexels-photo-7600383.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Children celebrating a birthday with cake and party hats">
+        </div>
+        <div class="story-copy">
+          <span class="eyebrow">Birthday Club</span>
+          <h2>The party starts before the cake.</h2>
+          <p>
+            Say goodbye to chaotic party planning. Jumpnest handles everything: private decorated party table, dedicated party marshal host, 90 minutes of VIP court access, artisan pizzas, and custom gift bags.
+          </p>
+          <div class="party-pills">
+            <span class="pill">8–25 Children</span>
+            <span class="pill">Dedicated Host</span>
+            <span class="pill">Food & Drinks Included</span>
+            <span class="pill">Theme Styling</span>
+          </div>
+          <div style="margin-top:24px; display:flex; gap:10px; flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="openBirthday('Jump & Feast')">Build Birthday Party</button>
+            <a class="btn btn-soft" href="birthday.html">Explore All Packages</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARENT TESTIMONIALS & REVIEWS -->
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Parent Voices</span>
+              <h2>Loved by parents. Adored by kids.</h2>
+            </div>
+            <p>Read honest reviews from families who made JUMPNEST their go-to weekend escape.</p>
+          </div>
+
+          <div class="quote-grid">
+            <article class="quote">
+              <div class="stars">★★★★★</div>
+              <p>“The online booking and digital waiver made arrival so seamless. My 5-year-old and 8-year-old both found zones that suited them, and I actually got to drink hot coffee in peace!”</p>
+              <small>— Ananya Sharma, Parent of two (Gachibowli)</small>
+            </article>
+
+            <article class="quote">
+              <div class="stars">★★★★★</div>
+              <p>“We celebrated Vihaan’s 6th birthday here last Saturday. The party host managed the kids brilliantly, the pizza was surprisingly gourmet, and the cake moment was unforgettable.”</p>
+              <small>— Rohan & Sneha M., Birthday Hosts (Banjara Hills)</small>
+            </article>
+
+            <article class="quote">
+              <div class="stars">★★★★★</div>
+              <p>“The cleanest play center in Hyderabad by a mile. You can smell how sanitized it is, the staff actively watches the trampolines, and the family pass pays for itself in 3 visits.”</p>
+              <small>— Dr. Meera Reddy, Frequent Visitor (Nagole)</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE FAQ WITH REAL-TIME SEARCH -->
+      <section style="background:var(--surface2)">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Got Questions?</span>
+              <h2>Good to know before your visit.</h2>
+            </div>
+            <p>Everything you need to know about socks, safety, waivers, and spectator rules.</p>
+          </div>
+
+          <!-- FAQ Search Input -->
+          <div class="faq-search-wrap">
+            <span class="faq-search-icon">🔍</span>
+            <input type="text" placeholder="Search FAQs (e.g., socks, age, food, waivers)..." oninput="filterFAQ(this.value)">
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>Do I need to sign a waiver before jumping?</summary>
+              <p>Yes, all jumpers must have a valid electronic waiver signed by a parent or legal guardian. You can complete it in 30 seconds online using our Express Waiver form to bypass the reception desk when you arrive!</p>
+            </details>
+
+            <details>
+              <summary>Why are special grip socks required?</summary>
+              <p>Approved anti-slip rubberized grip socks are mandatory on all trampoline and soft play surfaces. They ensure superior traction, preventing slips and protecting trampoline beds. You can buy them once for ₹80 and reuse them on every future visit.</p>
+            </details>
+
+            <details>
+              <summary>Can parents accompany toddlers in the play zones?</summary>
+              <p>Absolutely! Children aged 1–4 in our Little Loop and Cloud Club can be accompanied by 1 parent spectator free of charge to assist with climbing and balance.</p>
+            </details>
+
+            <details>
+              <summary>What should children wear to jump?</summary>
+              <p>Comfortable athletic wear like t-shirts, leggings, or sweatpants is ideal. Please avoid clothing with sharp zippers, metal buckles, dangling jewelry, or studded jeans.</p>
+            </details>
+
+            <details>
+              <summary>Is there an entrance fee for parents who just want to watch?</summary>
+              <p>No! Parents who are not jumping can enter and relax in our cafe observation lounge completely free. You get free Wi-Fi and a clear 360-degree panoramic view of all courts.</p>
+            </details>
+
+            <details>
+              <summary>Can we bring our own birthday cake or outside snacks?</summary>
+              <p>Outside food is permitted only with our booked Birthday Party packages (specifically birthday cakes and cupcakes). For everyday visitors, our on-site cafe offers organic juice boxes, pizzas, sandwiches, and barista coffee.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section class="container cta">
+        <div>
+          <h2>Ready when they are.</h2>
+          <p>Book your session online, bring the socks, and leave with smiles all around.</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <button class="btn btn-gold" onclick="openBooking()">Open Parent Booking</button>
+          <button class="btn btn-soft" style="background:#fff; color:var(--deep)" onclick="openWaiverModal()">Sign Digital Waiver</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="logo"></span>
+            <span>JUMPNEST</span>
+          </a>
+          <p style="max-width:360px; color:#9eb0a8; font-size:13px; line-height:1.6; margin-top:12px">
+            A considered indoor trampoline & soft play club where energetic movement, certified safety, and family convenience meet.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">IG</a>
+            <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">f</a>
+            <a href="https://www.youtube.com/" aria-label="YouTube" title="YouTube">▶</a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn" title="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Explore Center</h4>
+          <a href="attractions.html">Play Zones (6)</a>
+          <a href="passes.html">Pricing & Passes</a>
+          <a href="birthday.html">Birthday Club</a>
+          <a href="about.html">Our Story & Standards</a>
+          <a href="javascript:void(0)" onclick="openWaiverModal()">Sign Online Waiver</a>
+        </div>
+
+        <div>
+          <h4>For Parents</h4>
+          <a href="javascript:void(0)" onclick="openBooking()">Book a Session</a>
+          <a href="login.html">Parent Login</a>
+          <a href="signup.html">Create Account</a>
+          <a href="dashboard.html">Parent Dashboard</a>
+          <a href="blogs.html">Play Safety Guides</a>
+        </div>
+
+        <div>
+          <h4>Visit & Contact</h4>
+          <a href="contact.html">📍 Nagole, Hyderabad</a>
+          <a href="contact.html">⏰ 10:00 AM — 8:00 PM (Daily)</a>
+          <a href="mailto:hello@jumpnest.example">✉️ hello@jumpnest.example</a>
+          <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 JUMPNEST Indoor Play Center. All rights reserved.</span>
+        <span>Safety Standards · Terms & Conditions · Privacy Policy</span>
+      </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOOKING BAR (SMOOTH MOBILE JOURNEY) -->
+    <div class="mobile-book-bar">
+      <div class="mobile-book-bar-inner">
+        <div>
+          <b style="display:block; font-size:12px; font-family:Manrope">Ready to Jump?</b>
+          <small style="color:var(--muted); font-size:10px">Slots filling fast today</small>
+        </div>
+        <div style="display:flex; gap:6px">
+          <button class="btn btn-soft" style="padding:8px 12px; font-size:11px" onclick="openWaiverModal()">Waiver</button>
+          <button class="btn btn-primary" style="padding:8px 16px; font-size:11px" onclick="openBooking()">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHARED INTERACTIVE MODAL DIALOG -->
+    <div class="modal-backdrop" id="modal" onclick="if(event.target===this)closeModal()">
+      <div class="modal" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

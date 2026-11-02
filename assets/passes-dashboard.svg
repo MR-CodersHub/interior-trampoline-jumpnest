@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900" role="img" aria-labelledby="title desc">
+  <title id="title">JUMPNEST Family Loop pass dashboard preview</title>
+  <desc id="desc">A parent dashboard card showing 6 of 10 visits remaining, 4 used visits, an expiry date and recent visit history.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f3a35"/>
+      <stop offset="1" stop-color="#0d2722"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d7a53d"/>
+      <stop offset="1" stop-color="#c85a3f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#07130f" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="690" cy="100" r="120" fill="#d7a53d" opacity="0.12"/>
+  <circle cx="95" cy="805" r="140" fill="#c85a3f" opacity="0.14"/>
+  <circle cx="715" cy="760" r="70" fill="#ffffff" opacity="0.05"/>
+
+  <text x="90" y="105" fill="#d7a53d" font-family="Manrope, DM Sans, sans-serif" font-size="13" font-weight="800" letter-spacing="4">PARENT DASHBOARD</text>
+  <text x="90" y="140" fill="#ffffff" font-family="Manrope, DM Sans, sans-serif" font-size="30" font-weight="800">Your pass, at a glance.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="185" width="640" height="610" rx="34" fill="#fffdf8"/>
+  </g>
+
+  <g transform="translate(120 230)">
+    <rect width="46" height="46" rx="14" fill="#1f3a35"/>
+    <circle cx="18" cy="25" r="9" fill="none" stroke="#d7a53d" stroke-width="3.5"/>
+    <circle cx="32" cy="14" r="4" fill="#c85a3f"/>
+    <text x="60" y="21" fill="#18221f" font-family="Manrope, DM Sans, sans-serif" font-size="18" font-weight="800" letter-spacing="-0.4">JUMPNEST</text>
+    <text x="60" y="37" fill="#69736e" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" letter-spacing="1.4">PARENT PASS</text>
+
+    <rect x="390" y="0" width="130" height="42" rx="21" fill="#dcefe7"/>
+    <circle cx="410" cy="21" r="5" fill="#507b6b"/>
+    <text x="424" y="25" fill="#24634d" font-family="DM Sans, sans-serif" font-size="11" font-weight="800">ACTIVE</text>
+  </g>
+
+  <text x="120" y="335" fill="#18221f" font-family="Manrope, DM Sans, sans-serif" font-size="29" font-weight="800" letter-spacing="-0.8">Family Loop Pass</text>
+  <text x="120" y="358" fill="#69736e" font-family="DM Sans, sans-serif" font-size="13">10-visit pass · 90-day validity</text>
+
+  <text x="120" y="445" fill="#18221f" font-family="Manrope, DM Sans, sans-serif" font-size="76" font-weight="800" letter-spacing="-4">6</text>
+  <text x="205" y="442" fill="#69736e" font-family="DM Sans, sans-serif" font-size="15" font-weight="700">visits remaining</text>
+  <text x="120" y="470" fill="#69736e" font-family="DM Sans, sans-serif" font-size="12">out of 10 total visits</text>
+
+  <rect x="120" y="500" width="560" height="14" rx="7" fill="#f0ebe1"/>
+  <rect x="120" y="500" width="336" height="14" rx="7" fill="url(#bar)"/>
+  <circle cx="456" cy="507" r="10" fill="#fffdf8" stroke="#c85a3f" stroke-width="4"/>
+
+  <g transform="translate(120 555)">
+    <rect width="170" height="92" rx="18" fill="#f7f4ed"/>
+    <text x="20" y="30" fill="#69736e" font-family="DM Sans, sans-serif" font-size="10" font-weight="800" letter-spacing="1">TOTAL VISITS</text>
+    <text x="20" y="70" fill="#18221f" font-family="Manrope, DM Sans, sans-serif" font-size="32" font-weight="800">10</text>
+  </g>
+  <g transform="translate(315 555)">
+    <rect width="170" height="92" rx="18" fill="#f7f4ed"/>
+    <text x="20" y="30" fill="#69736e" font-family="DM Sans, sans-serif" font-size="10" font-weight="800" letter-spacing="1">USED VISITS</text>
+    <text x="20" y="70" fill="#c85a3f" font-family="Manrope, DM Sans, sans-serif" font-size="32" font-weight="800">4</text>
+  </g>
+  <g transform="translate(510 555)">
+    <rect width="170" height="92" rx="18" fill="#f7f4ed"/>
+    <text x="20" y="30" fill="#69736e" font-family="DM Sans, sans-serif" font-size="10" font-weight="800" letter-spacing="1">EXPIRY DATE</text>
+    <text x="20" y="66" fill="#18221f" font-family="Manrope, DM Sans, sans-serif" font-size="24" font-weight="800">14 Dec</text>
+  </g>
+
+  <g transform="translate(120 682)">
+    <circle cx="8" cy="8" r="6" fill="#507b6b"/>
+    <text x="26" y="12" fill="#18221f" font-family="DM Sans, sans-serif" font-size="13" font-weight="700">Sun, 08 Dec · 2:30 PM</text>
+    <text x="560" y="12" fill="#69736e" font-family="DM Sans, sans-serif" font-size="12" text-anchor="end">−1 visit</text>
+    <line x1="0" y1="30" x2="560" y2="30" stroke="#ded8cb" stroke-width="1"/>
+    <circle cx="8" cy="54" r="6" fill="#507b6b"/>
+    <text x="26" y="58" fill="#18221f" font-family="DM Sans, sans-serif" font-size="13" font-weight="700">Sat, 30 Nov · 11:30 AM</text>
+    <text x="560" y="58" fill="#69736e" font-family="DM Sans, sans-serif" font-size="12" text-anchor="end">−1 visit</text>
+  </g>
+
+  <text x="400" y="850" fill="#c3d0ca" font-family="DM Sans, sans-serif" font-size="12" text-anchor="middle">Live balance, expiry and visit history — always in sync.</text>
+</svg>

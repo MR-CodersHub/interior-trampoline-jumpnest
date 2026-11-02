@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parent Login | JUMPNEST</title>
+  <meta name="description" content="Sign in to your JUMPNEST parent dashboard to manage play sessions, track multi-visit passes, and view child profiles.">
+  <meta property="og:title" content="Parent Login | JUMPNEST">
+  <meta property="og:description" content="One calm account for the whole family. Instant booking & pass tracking.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f3a35'/%3E%3Ccircle cx='30' cy='33' r='15' fill='none' stroke='%23d7a53d' stroke-width='6'/%3E%3Ccircle cx='46' cy='17' r='6' fill='%23c85a3f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="has-announcement">
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="live-status">
+        <span class="live-dot"></span>
+        <span>Open Today: 10:00 AM — 8:00 PM · Nagole, Hyderabad · Parent Portal Active</span>
+      </div>
+      <div class="announcement-links">
+        <a href="javascript:void(0)" onclick="openWaiverModal()">📝 Sign Digital Waiver</a>
+        <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        <a href="contact.html">📍 Directions & Parking</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- SITE HEADER -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo"></span>
+          <span>JUMPNEST</span>
+        </a>
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="home2.html">Home 2</a>
+          <a href="attractions.html">Attractions</a>
+          <a href="passes.html">Passes & Pricing</a>
+          <a href="birthday.html">Birthdays</a>
+          <a href="about.html">About</a>
+          <a href="blogs.html">Play Guides</a>
+          <a href="contact.html">Contact</a>
+        <a class="mobile-extra" href="javascript:void(0)" onclick="openWaiverModal()">Sign Waiver</a><a class="mobile-extra" href="javascript:void(0)" onclick="toggleRTL()">Toggle RTL</a></nav>
+        <div class="nav-actions">
+          <button class="btn-waiver" onclick="openWaiverModal()">
+            <span>✍️</span>
+            <span>Sign Waiver</span>
+          </button>
+          <button class="btn btn-primary nav-cta" onclick="openBooking()">Book Now <span aria-hidden="true">&rarr;</span></button>
+          <button class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode" onclick="toggleTheme()">◐</button>
+          <button class="icon-btn rtl-toggle" title="Toggle right-to-left layout" aria-label="Toggle right-to-left layout" onclick="toggleRTL()">RTL</button>
+          <a class="btn btn-soft nav-signin" href="login.html">Sign In</a>
+          <button class="icon-btn mobile-toggle" aria-label="Open navigation" onclick="toggleMobile()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-wrap">
+        <div class="auth-card">
+          <a class="auth-brand" href="index.html" aria-label="JUMPNEST home">
+            <span class="logo" aria-hidden="true"></span>
+            <span class="auth-brand-copy">
+              <span class="auth-brand-name">JUMPNEST</span>
+              <span class="auth-brand-tag">Indoor Play Club</span>
+            </span>
+          </a>
+          <span class="eyebrow">Parent Access</span>
+          <h1>Parent Login</h1>
+          <p style="color:var(--muted)">Welcome back. Sign in to book sessions, use passes, and check waiver status for your family.</p>
+          <div class="auth-note">
+            💡 <b>Frontend Demo Mode:</b> Use any email and password to explore the parent portal.
+          </div>
+          <form onsubmit="event.preventDefault(); openDash('user');">
+            <div class="field">
+              <label for="login-email">Email Address *</label>
+              <input id="login-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" value="aanya@example.com">
+            </div>
+            <div class="field">
+              <label for="login-password">Password *</label>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password" value="jumpnest">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:13px; font-size:14px">
+              Log In to Parent Portal
+            </button>
+          </form>
+          <a class="btn btn-soft" style="width:100%; margin-top:10px" href="signup.html">Create a Parent Account</a>
+          <p style="font-size:12px; color:var(--muted); margin-top:18px">
+            New to Jumpnest? <a href="signup.html" style="font-weight:700; color:var(--accent)">Register your family in 1 minute</a>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container grid-3">
+          <div class="card">
+            <span class="pill">Fast Booking</span>
+            <h3>Book Sessions in Seconds</h3>
+            <p>See live available slots with capacity guarantees and book directly from your phone.</p>
+          </div>
+          <div class="card">
+            <span class="pill">Balance Ledger</span>
+            <h3>Track Pass Balance</h3>
+            <p>View remaining visits, expiry dates, and timestamped visit records in one organized space.</p>
+          </div>
+          <div class="card">
+            <span class="pill">Celebrations</span>
+            <h3>Plan Birthdays</h3>
+            <p>Submit party inquiries, customize themes, and track coordination updates effortlessly.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="logo"></span>
+            <span>JUMPNEST</span>
+          </a>
+          <p style="max-width:360px; color:#9eb0a8; font-size:13px; line-height:1.6; margin-top:12px">
+            A considered indoor trampoline & soft play club where energetic movement, certified safety, and family convenience meet.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.instagram.com/" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore Center</h4>
+          <a href="attractions.html">Play Zones (6)</a>
+          <a href="passes.html">Pricing & Passes</a>
+          <a href="birthday.html">Birthday Club</a>
+          <a href="about.html">Our Story & Standards</a>
+          <a href="javascript:void(0)" onclick="openWaiverModal()">Sign Online Waiver</a>
+        </div>
+        <div>
+          <h4>For Parents</h4>
+          <a href="javascript:void(0)" onclick="openBooking()">Book a Session</a>
+          <a href="login.html">Parent Login</a>
+          <a href="signup.html">Create Account</a>
+          <a href="blogs.html">Play Safety Guides</a>
+        </div>
+        <div>
+          <h4>Visit & Contact</h4>
+          <a href="contact.html">📍 Nagole, Hyderabad</a>
+          <a href="contact.html">⏰ 10:00 AM — 8:00 PM (Daily)</a>
+          <a href="mailto:hello@jumpnest.example">✉️ hello@jumpnest.example</a>
+          <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 JUMPNEST Indoor Play Center. All rights reserved.</span>
+        <span>Safety Standards · Terms & Conditions · Privacy Policy</span>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modal" onclick="if(event.target===this)closeModal()">
+      <div class="modal" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

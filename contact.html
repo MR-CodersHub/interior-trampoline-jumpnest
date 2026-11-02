@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact & Location | JUMPNEST Indoor Play Center</title>
+  <meta name="description" content="Find JUMPNEST indoor trampoline and soft play center in Nagole, Hyderabad. Contact us for play session bookings, school trips, and birthday celebrations.">
+  <meta property="og:title" content="Contact & Location | JUMPNEST">
+  <meta property="og:description" content="Come for the play. Stay for the ease. Located on Inner Ring Road, Nagole, Hyderabad.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f3a35'/%3E%3Ccircle cx='30' cy='33' r='15' fill='none' stroke='%23d7a53d' stroke-width='6'/%3E%3Ccircle cx='46' cy='17' r='6' fill='%23c85a3f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="has-announcement">
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="live-status">
+        <span class="live-dot"></span>
+        <span>Open Today: 10:00 AM — 8:00 PM · Nagole, Hyderabad · Valet & Basement Parking Available</span>
+      </div>
+      <div class="announcement-links">
+        <a href="javascript:void(0)" onclick="openWaiverModal()">📝 Sign Digital Waiver</a>
+        <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        <a href="#location-map">📍 Directions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- SITE HEADER -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo"></span>
+          <span>JUMPNEST</span>
+        </a>
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="home2.html">Home 2</a>
+          <a href="attractions.html">Attractions</a>
+          <a href="passes.html">Passes & Pricing</a>
+          <a href="birthday.html">Birthdays</a>
+          <a href="about.html">About</a>
+          <a href="blogs.html">Play Guides</a>
+          <a class="active" href="contact.html">Contact</a>
+        <a class="mobile-extra" href="javascript:void(0)" onclick="openWaiverModal()">Sign Waiver</a><a class="mobile-extra" href="javascript:void(0)" onclick="toggleRTL()">Toggle RTL</a></nav>
+        <div class="nav-actions">
+          <button class="btn-waiver" onclick="openWaiverModal()">
+            <span>✍️</span>
+            <span>Sign Waiver</span>
+          </button>
+          <button class="btn btn-primary nav-cta" onclick="openBooking()">Book Now <span aria-hidden="true">&rarr;</span></button>
+          <button class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode" onclick="toggleTheme()">◐</button>
+          <button class="icon-btn rtl-toggle" title="Toggle right-to-left layout" aria-label="Toggle right-to-left layout" onclick="toggleRTL()">RTL</button>
+          <a class="btn btn-soft nav-signin" href="login.html">Sign In</a>
+          <button class="icon-btn mobile-toggle" aria-label="Open navigation" onclick="toggleMobile()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Contact & Visit</span>
+          <h1>Come for the play. Stay for the ease.</h1>
+          <p>
+            Whether you're planning your family’s first visit, reserving a birthday party room, or inquiring about group school excursions, our guest team is here 7 days a week to help.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM & MAP -->
+      <section style="padding-top:0">
+        <div class="container contact-layout">
+          <div class="card">
+            <span class="eyebrow">Send a Message</span>
+            <h2 style="font:800 36px Manrope; letter-spacing:-0.04em; margin:8px 0 16px">How can we help?</h2>
+            <form onsubmit="event.preventDefault(); toast('Thank you! Your message has been sent to our guest team.'); this.reset();">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Parent / Guardian Name *</label>
+                  <input required placeholder="Your full name">
+                </div>
+                <div class="field">
+                  <label>Email Address *</label>
+                  <input required type="email" placeholder="you@example.com">
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label>Phone / WhatsApp Number *</label>
+                  <input required type="tel" placeholder="+91 98765 43210">
+                </div>
+                <div class="field">
+                  <label>Topic *</label>
+                  <select required>
+                    <option value="">Select a topic</option>
+                    <option>General Question & Visit Planning</option>
+                    <option>Session Rescheduling / Pass Inquiry</option>
+                    <option>Birthday Party Planning & Custom Themes</option>
+                    <option>School Excursion & Group Booking (15+ kids)</option>
+                    <option>Lost & Found Item Retrieval</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Your Message *</label>
+                <textarea required placeholder="Tell us how we can assist you..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; font-size:14px; padding:13px">
+                Send Message to Guest Support
+              </button>
+            </form>
+          </div>
+
+          <div class="map" id="location-map">
+            <iframe title="JUMPNEST Nagole Hyderabad Location Map" src="https://www.google.com/maps?q=Nagole%2C%20Hyderabad&output=embed" loading="lazy" style="width:100%; height:100%; min-height:480px; border:0; border-radius:22px"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISIT INFO CARDS -->
+      <section>
+        <div class="container grid-3">
+          <div class="card">
+            <span class="pill">Location & Parking</span>
+            <h3>Nagole, Hyderabad</h3>
+            <p>Plot 42, Inner Ring Road, Beside Metro Pillar 1042, Nagole, Hyderabad, Telangana 500068.</p>
+            <div style="font-size:12px; color:var(--muted); margin-top:8px">
+              🚗 Free 2-level basement parking with valet on weekends.<br>
+              🚇 3-min walk from Nagole Metro Station (Blue Line).
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="pill">Operating Hours</span>
+            <h3>10:00 AM — 8:00 PM</h3>
+            <p>Open 7 days a week, including all public holidays and school breaks.</p>
+            <div style="font-size:12px; color:var(--muted); margin-top:8px">
+              👶 Toddler Morning: 10:00 AM — 1:00 PM (Mon–Fri)<br>
+              🎉 Weekend Glow Sessions: 6:00 PM — 8:00 PM
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="pill">Contact & WhatsApp</span>
+            <h3>Direct Helpline</h3>
+            <p>Call or WhatsApp our reception desk for live slot capacity checks and birthday queries.</p>
+            <div style="font-size:13px; font-weight:700; margin-top:8px">
+              📞 +91 90000 00000<br>
+              ✉️ hello@jumpnest.example
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARRIVAL CHECKLIST -->
+      <section>
+        <div class="container dark-panel">
+          <span class="eyebrow" style="color:#d7a53d">Smooth Arrival</span>
+          <h2 style="font:800 48px Manrope; letter-spacing:-0.05em; margin:12px 0">Three things to check before you leave home.</h2>
+          <div class="check-grid">
+            <div class="check">
+              <b>1. Sign Waiver Online</b>
+              <span>Save 10 minutes at the front desk by having your waiver signed beforehand.</span>
+            </div>
+            <div class="check">
+              <b>2. Bring or Buy Grip Socks</b>
+              <span>Pack your Jumpnest grip socks or grab fresh pairs at reception for ₹80.</span>
+            </div>
+            <div class="check">
+              <b>3. Arrive 15 Mins Before Slot</b>
+              <span>Allows comfortable time for sock check, wristband collection, and lockers.</span>
+            </div>
+            <div class="check">
+              <b>4. Dress for Movement</b>
+              <span>Athletic clothing without buckles, snaps, dangling cords, or belts.</span>
+            </div>
+          </div>
+          <div style="margin-top:24px; display:flex; gap:10px; flex-wrap:wrap">
+            <button class="btn btn-gold" onclick="openWaiverModal()">✍️ Sign Digital Waiver</button>
+            <button class="btn btn-soft" style="background:#fff; color:var(--deep)" onclick="openBooking()">Book Your Session</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section style="background:var(--surface2)">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Visiting FAQ</span>
+              <h2>Quick answers before your journey.</h2>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>Do I need to book in advance or can we just walk in?</summary>
+              <p>Walk-ins are welcomed, but booking online is strongly recommended for weekends, holidays, and evening sessions because we maintain strict court capacity caps for safety.</p>
+            </details>
+            <details>
+              <summary>Is there an age limit for children?</summary>
+              <p>JUMPNEST is designed for children aged 1 to 12. We have a dedicated gated Toddler Sanctuary (Little Loop) for 1–4 year-olds, while 6–12+ year-olds enjoy the high-flying trampoline courts and ninja track.</p>
+            </details>
+            <details>
+              <summary>Do spectator parents need to purchase a ticket?</summary>
+              <p>No, non-jumping parents have free entry to our cafe viewing lounge and seating areas! Only jumping participants require passes.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="logo"></span>
+            <span>JUMPNEST</span>
+          </a>
+          <p style="max-width:360px; color:#9eb0a8; font-size:13px; line-height:1.6; margin-top:12px">
+            A considered indoor trampoline & soft play club where energetic movement, certified safety, and family convenience meet.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.instagram.com/" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore Center</h4>
+          <a href="attractions.html">Play Zones (6)</a>
+          <a href="passes.html">Pricing & Passes</a>
+          <a href="birthday.html">Birthday Club</a>
+          <a href="about.html">Our Story & Standards</a>
+          <a href="javascript:void(0)" onclick="openWaiverModal()">Sign Online Waiver</a>
+        </div>
+        <div>
+          <h4>For Parents</h4>
+          <a href="javascript:void(0)" onclick="openBooking()">Book a Session</a>
+          <a href="login.html">Parent Login</a>
+          <a href="signup.html">Create Account</a>
+          <a href="dashboard.html">Parent Dashboard</a>
+          <a href="blogs.html">Play Safety Guides</a>
+        </div>
+        <div>
+          <h4>Visit & Contact</h4>
+          <a href="contact.html">📍 Nagole, Hyderabad</a>
+          <a href="contact.html">⏰ 10:00 AM — 8:00 PM (Daily)</a>
+          <a href="mailto:hello@jumpnest.example">✉️ hello@jumpnest.example</a>
+          <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 JUMPNEST Indoor Play Center. All rights reserved.</span>
+        <span>Safety Standards · Terms & Conditions · Privacy Policy</span>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modal" onclick="if(event.target===this)closeModal()">
+      <div class="modal" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

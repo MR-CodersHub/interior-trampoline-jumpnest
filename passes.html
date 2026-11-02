@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing & Multi-Visit Passes | JUMPNEST</title>
+  <meta name="description" content="Simple, transparent pricing and multi-visit passes for JUMPNEST indoor trampoline and soft play center. Save up to 35% on repeat visits with our Family Loop pass.">
+  <meta property="og:title" content="Pricing & Multi-Visit Passes | JUMPNEST">
+  <meta property="og:description" content="Simple pricing. Clear value. Visible pass balance & usage history in your parent dashboard.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f3a35'/%3E%3Ccircle cx='30' cy='33' r='15' fill='none' stroke='%23d7a53d' stroke-width='6'/%3E%3Ccircle cx='46' cy='17' r='6' fill='%23c85a3f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="has-announcement">
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="live-status">
+        <span class="live-dot"></span>
+        <span>Open Today: 10:00 AM — 8:00 PM · Nagole, Hyderabad · Today's Status: Moderate capacity</span>
+      </div>
+      <div class="announcement-links">
+        <a href="javascript:void(0)" onclick="openWaiverModal()">📝 Sign Digital Waiver</a>
+        <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        <a href="contact.html">📍 Directions & Parking</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- SITE HEADER -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo"></span>
+          <span>JUMPNEST</span>
+        </a>
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="home2.html">Home 2</a>
+          <a href="attractions.html">Attractions</a>
+          <a class="active" href="passes.html">Passes & Pricing</a>
+          <a href="birthday.html">Birthdays</a>
+          <a href="about.html">About</a>
+          <a href="blogs.html">Play Guides</a>
+          <a href="contact.html">Contact</a>
+        <a class="mobile-extra" href="javascript:void(0)" onclick="openWaiverModal()">Sign Waiver</a><a class="mobile-extra" href="javascript:void(0)" onclick="toggleRTL()">Toggle RTL</a></nav>
+        <div class="nav-actions">
+          <button class="btn-waiver" onclick="openWaiverModal()">
+            <span>✍️</span>
+            <span>Sign Waiver</span>
+          </button>
+          <button class="btn btn-primary nav-cta" onclick="openBooking()">Book Now <span aria-hidden="true">&rarr;</span></button>
+          <button class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode" onclick="toggleTheme()">◐</button>
+          <button class="icon-btn rtl-toggle" title="Toggle right-to-left layout" aria-label="Toggle right-to-left layout" onclick="toggleRTL()">RTL</button>
+          <a class="btn btn-soft nav-signin" href="login.html">Sign In</a>
+          <button class="icon-btn mobile-toggle" aria-label="Open navigation" onclick="toggleMobile()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Pricing & Passes</span>
+          <h1>Simple pricing. Clear value. No mystery balance.</h1>
+          <p>
+            Choose a single visit or a multi-session pass that matches your family’s routine. Every pass features visible visits, transparent expiry, and real-time usage history right in your parent dashboard.
+          </p>
+        </div>
+      </section>
+
+      <!-- MULTI-VISIT PASSES -->
+      <section>
+        <div class="container">
+          <div class="price-grid">
+            <!-- Pass 1 -->
+            <article class="price-card">
+              <span class="pill">5 visits · 45 Days</span>
+              <h3>Weekend Pair</h3>
+              <div class="price">₹1,499</div>
+              <p>Valid on all weekends and holidays. Great for occasional family treats.</p>
+              <ul>
+                <li>5 full 90-minute play sessions</li>
+                <li>Access to all 5 play arenas</li>
+                <li>Digital pass balance in dashboard</li>
+                <li>Shareable with 1 sibling</li>
+              </ul>
+              <button class="btn btn-soft" style="width:100%" onclick="openBooking({experience:'standard-90'})">Purchase Pass</button>
+            </article>
+
+            <!-- Pass 2: FEATURED -->
+            <article class="price-card featured">
+              <span class="tag">MOST POPULAR · SAVE 30%</span>
+              <span class="pill" style="background:rgba(255,255,255,.15); color:#fff">10 visits · 90 Days</span>
+              <h3>Family Loop</h3>
+              <div class="price">₹2,799</div>
+              <p>The premier choice for regular play lovers. Pays for itself in just 3 visits.</p>
+              <ul>
+                <li>10 full 90-minute play sessions</li>
+                <li>Shareable across multiple siblings</li>
+                <li>Priority weekend session booking</li>
+                <li>2 free pairs of Jumpnest grip socks</li>
+                <li>Timestamped visit history in dashboard</li>
+              </ul>
+              <button class="btn btn-gold" style="width:100%" onclick="openBooking({experience:'pass-holder'})">Purchase Pass</button>
+            </article>
+
+            <!-- Pass 3 -->
+            <article class="price-card">
+              <span class="pill">8 visits · 60 Days</span>
+              <h3>After-School Pass</h3>
+              <div class="price">₹1,999</div>
+              <p>Built for weekday energy releases after homework and before dinner.</p>
+              <ul>
+                <li>8 weekday sessions (Monday to Friday)</li>
+                <li>90-minute sessions anytime 3:00 PM – 8:00 PM</li>
+                <li>Pass balance tracking online</li>
+                <li>Quick 1-click rebooking from dashboard</li>
+              </ul>
+              <button class="btn btn-soft" style="width:100%" onclick="openBooking({experience:'standard-90'})">Purchase Pass</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SINGLE SESSION TICKETS -->
+      <section style="background:var(--surface2)">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Single Day Tickets</span>
+              <h2>Just visiting for today?</h2>
+            </div>
+            <p>Single-visit tickets come with guaranteed capacity and free parent spectator access.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <span class="pill">Ages 1–4</span>
+              <h3>Toddler Morning Jump</h3>
+              <div class="price" style="font-size:36px; margin:10px 0">₹399 <small>/ 60m</small></div>
+              <p>Gentle sensory morning play in our gated Little Loop sanctuary.</p>
+              <ul style="font-size:12px; color:var(--muted); padding-left:18px; margin:14px 0">
+                <li>1 Free accompanying adult inside the zone</li>
+                <li>Valid Mon–Fri 10:00 AM – 1:00 PM</li>
+                <li>Low sensory, gentle music environment</li>
+              </ul>
+              <button class="btn btn-soft" style="width:100%" onclick="openBooking({experience:'toddler-60'})">Book Toddler Ticket</button>
+            </div>
+
+            <div class="card">
+              <span class="pill">Standard Play</span>
+              <h3>90-Minute Open Jump</h3>
+              <div class="price" style="font-size:36px; margin:10px 0">₹699 <small>/ 90m</small></div>
+              <p>Our flagship play session covering all trampolines, soft play & ninja track.</p>
+              <ul style="font-size:12px; color:var(--muted); padding-left:18px; margin:14px 0">
+                <li>Full access to all 5 play courts</li>
+                <li>Free admission for 2 parent spectators</li>
+                <li>Free electronic locker token</li>
+              </ul>
+              <button class="btn btn-primary" style="width:100%" onclick="openBooking({experience:'standard-90'})">Book 90m Ticket</button>
+            </div>
+
+            <div class="card">
+              <span class="pill">Family Pack</span>
+              <h3>Family 4-Jumper Bundle</h3>
+              <div class="price" style="font-size:36px; margin:10px 0">₹2,199 <small>/ 4 kids</small></div>
+              <p>Save ₹600 when booking for siblings and friends together.</p>
+              <ul style="font-size:12px; color:var(--muted); padding-left:18px; margin:14px 0">
+                <li>4 Jumpers for 90 minutes</li>
+                <li>Includes 4 pairs of grip socks (save ₹320)</li>
+                <li>Reserved cafe table on arrival</li>
+              </ul>
+              <button class="btn btn-soft" style="width:100%" onclick="openBooking({experience:'family-90'})">Book Family Bundle</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIVE DASHBOARD PREVIEW -->
+      <section class="container story">
+        <div class="story-copy">
+          <span class="eyebrow">Your Pass, Your Way</span>
+          <h2>Know exactly what is left.</h2>
+          <p>
+            Inside your parent dashboard, every pass shows total visits, used visits, remaining visits, purchase date, expiry date, and a timestamped usage history. No surprise expirations, ever.
+          </p>
+          <div class="grid-2">
+            <div class="card">
+              <b style="font:800 32px Manrope; color:var(--ink)">10</b>
+              <p style="margin:2px 0; font-size:11px; text-transform:uppercase">Total Visits</p>
+            </div>
+            <div class="card">
+              <b style="font:800 32px Manrope; color:var(--green)">6</b>
+              <p style="margin:2px 0; font-size:11px; text-transform:uppercase">Remaining Visits</p>
+            </div>
+            <div class="card">
+              <b style="font:800 32px Manrope; color:var(--accent)">4</b>
+              <p style="margin:2px 0; font-size:11px; text-transform:uppercase">Used Visits</p>
+            </div>
+            <div class="card">
+              <b style="font:800 32px Manrope; color:var(--accent2)">14 Dec</b>
+              <p style="margin:2px 0; font-size:11px; text-transform:uppercase">Expiry Date</p>
+            </div>
+          </div>
+          <div style="margin-top:20px">
+            <a class="btn btn-primary" href="dashboard.html">Preview Parent Dashboard</a>
+          </div>
+        </div>
+        <div class="story-photo">
+          <img src="assets/passes-dashboard.svg" alt="Illustration of the Family Loop pass with six visits remaining">
+        </div>
+      </section>
+
+      <!-- WHY GET A PASS -->
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Why a Pass</span>
+              <h2>Built for real family rhythms.</h2>
+            </div>
+            <p>Choose a pass when you want spontaneous play without having to enter payment details every time.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <span class="pill">01</span>
+              <h3>Repeat Without Friction</h3>
+              <p>Book your next weekend slot in 1 click using your active pass balance from any mobile phone.</p>
+            </div>
+            <div class="card">
+              <span class="pill">02</span>
+              <h3>Track Every Visit</h3>
+              <p>See exactly when each visit was redeemed and which child’s profile was attached.</p>
+            </div>
+            <div class="card">
+              <span class="pill">03</span>
+              <h3>Proactive Expiry Alerts</h3>
+              <p>Receive friendly SMS & email notifications 14 days and 3 days before any pass balance expires.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASS FAQS -->
+      <section style="background:var(--surface2)">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Pass Questions</span>
+              <h2>Pass details, plainly explained.</h2>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>Can one pass be shared across multiple siblings?</summary>
+              <p>Yes! Our 10-visit Family Loop pass allows you to redeem multiple visits in the same session for siblings or visiting cousins.</p>
+            </details>
+            <details>
+              <summary>What happens if my pass is nearing its expiration date?</summary>
+              <p>You can easily extend your pass by 30 days by recharging with any additional 5-visit pack before your expiry date.</p>
+            </details>
+            <details>
+              <summary>Do pass holders need to reserve slots in advance?</summary>
+              <p>Yes, reserving online is strongly recommended on weekends to guarantee entry when courts reach maximum safe capacity. Pass holders have priority slot selection!</p>
+            </details>
+            <details>
+              <summary>Are grip socks included with the passes?</summary>
+              <p>The 10-visit Family Loop pass includes 2 free pairs of reusable grip socks. Additional socks can be purchased for ₹80/pair.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="container cta">
+        <div>
+          <h2>Ready to load your pass?</h2>
+          <p>Start your family pass today and enjoy seamless, discounted play sessions.</p>
+        </div>
+        <button class="btn btn-gold" onclick="openBooking({experience:'pass-holder'})">Get Family Pass Now</button>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="logo"></span>
+            <span>JUMPNEST</span>
+          </a>
+          <p style="max-width:360px; color:#9eb0a8; font-size:13px; line-height:1.6; margin-top:12px">
+            A considered indoor trampoline & soft play club where energetic movement, certified safety, and family convenience meet.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.instagram.com/" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore Center</h4>
+          <a href="attractions.html">Play Zones (6)</a>
+          <a href="passes.html">Pricing & Passes</a>
+          <a href="birthday.html">Birthday Club</a>
+          <a href="about.html">Our Story & Standards</a>
+          <a href="javascript:void(0)" onclick="openWaiverModal()">Sign Online Waiver</a>
+        </div>
+        <div>
+          <h4>For Parents</h4>
+          <a href="javascript:void(0)" onclick="openBooking()">Book a Session</a>
+          <a href="login.html">Parent Login</a>
+          <a href="signup.html">Create Account</a>
+          <a href="dashboard.html">Parent Dashboard</a>
+          <a href="blogs.html">Play Safety Guides</a>
+        </div>
+        <div>
+          <h4>Visit & Contact</h4>
+          <a href="contact.html">📍 Nagole, Hyderabad</a>
+          <a href="contact.html">⏰ 10:00 AM — 8:00 PM (Daily)</a>
+          <a href="mailto:hello@jumpnest.example">✉️ hello@jumpnest.example</a>
+          <a href="tel:+919000000000">📞 +91 90000 00000</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 JUMPNEST Indoor Play Center. All rights reserved.</span>
+        <span>Safety Standards · Terms & Conditions · Privacy Policy</span>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modal" onclick="if(event.target===this)closeModal()">
+      <div class="modal" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

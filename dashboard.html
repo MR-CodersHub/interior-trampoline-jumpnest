@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parent Dashboard | JUMPNEST</title>
+  <meta name="description" content="Manage family play sessions, track multi-visit passes, and view child profiles in JUMPNEST parent dashboard.">
+  <meta property="og:title" content="Parent Dashboard | JUMPNEST">
+  <meta property="og:description" content="Big movement. Little moments. Thoughtfully designed indoor play.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f3a35'/%3E%3Ccircle cx='30' cy='33' r='15' fill='none' stroke='%23d7a53d' stroke-width='6'/%3E%3Ccircle cx='46' cy='17' r='6' fill='%23c85a3f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="app-page">
+  <div class="main">
+    <main>
+      <div class="dash-shell">
+        <aside class="sidebar" id="dashboardSidebar">
+          <button class="sidebar-close" type="button" onclick="closeDashboardSidebar()" aria-label="Close dashboard menu">×</button>
+          <a class="brand" href="index.html">
+            <span class="logo"></span>
+            <span>JUMPNEST</span>
+          </a>
+          <div class="side-title">Parent Space</div>
+          <a class="side-link active" href="dashboard.html">Overview</a>
+          <a class="side-link" href="javascript:void(0)" onclick="openBooking()">Book a Session</a>
+          <a class="side-link" href="#pass-usage">My Passes</a>
+          <a class="side-link" href="#my-children">My Children</a>
+          <a class="side-link" href="javascript:void(0)" onclick="openWaiverModal()">Digital Waiver (Active)</a>
+          <a class="side-link" href="javascript:void(0)" onclick="openBirthday('Jump & Feast')">Birthday Planner</a>
+          <a class="side-link" href="#notifications-area">Notifications (2)</a>
+          <a class="side-link" href="profile.html">Profile Settings</a>
+          <div class="side-title">Website</div>
+          <a class="side-link" href="index.html">Back to JUMPNEST</a>
+          <a class="side-link" href="login.html" onclick="toast('Logged out of demo session.')">Logout</a>
+        </aside>
+        <div class="sidebar-backdrop" onclick="closeDashboardSidebar()" aria-hidden="true"></div>
+
+        <main class="dash-main">
+          <div class="dash-mobile-bar">
+            <button class="dash-menu-toggle" type="button" onclick="toggleDashboardSidebar()" aria-controls="dashboardSidebar" aria-expanded="false">
+              <span aria-hidden="true">☰</span> Menu
+            </button>
+          </div>
+          <div class="dash-top">
+            <div>
+              <span class="eyebrow">Parent Dashboard</span>
+              <h1>Good evening, Aanya.</h1>
+              <p style="margin:5px 0; color:var(--muted); font-size:13px">
+                Your next booked play session is this <b>Thursday at 2:30 PM</b> · Nagole Center.
+              </p>
+            </div>
+            <div class="dash-profile-chip">
+              <a href="profile.html" class="profile-chip" aria-label="Open parent profile">
+                <span class="profile-avatar">AS</span>
+                <span>
+                  <b>Aanya Sharma</b>
+                  <small>Parent Account</small>
+                </span>
+              </a>
+              <button class="icon-btn" onclick="toggleTheme()" title="Toggle dark mode">◐</button>
+              <button class="icon-btn" onclick="toggleRTL()" title="Toggle RTL" aria-label="Toggle right-to-left layout">RTL</button>
+              <button class="btn btn-primary" onclick="openBooking()">＋ Book Session</button>
+            </div>
+          </div>
+
+          <!-- PROFILE & WAIVER STATUS BANNER -->
+          <div class="profile-banner" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px">
+            <div style="display:flex; align-items:center; gap:14px">
+              <div class="profile-avatar">AS</div>
+              <div>
+                <span>Family Profile & Digital Waiver</span>
+                <b>Aanya Sharma · 2 Jumpers Saved</b>
+                <small>aanya@example.com · +91 90000 00000</small>
+              </div>
+            </div>
+            <div style="display:flex; gap:8px">
+              <span class="status green" style="font-size:11px; padding:7px 12px">✅ Waiver Active (Through Oct 2027)</span>
+              <button class="btn btn-soft" style="font-size:11px; padding:7px 12px" onclick="openWaiverModal()">Update Waiver</button>
+            </div>
+          </div>
+
+          <!-- KPI GRID -->
+          <div class="kpi-grid">
+            <div class="kpi">
+              <label>Family Pass Balance</label>
+              <strong>6</strong>
+              <span class="status green">of 10 visits remaining</span>
+            </div>
+            <div class="kpi">
+              <label>Upcoming Sessions</label>
+              <strong>2</strong>
+              <span style="font-size:11px; color:var(--muted); display:block; margin-top:4px">Next: Thu 2:30 PM</span>
+            </div>
+            <div class="kpi">
+              <label>Birthday Club</label>
+              <strong>1</strong>
+              <span class="status yellow">Proposal Ready</span>
+            </div>
+            <div class="kpi">
+              <label>Safety & Waiver</label>
+              <strong>100%</strong>
+              <span class="status green">Check-in Ready</span>
+            </div>
+          </div>
+
+          <!-- SESSIONS & PASS SNAPSHOT -->
+          <div class="dash-grid">
+            <section class="panel" id="upcoming-sessions">
+              <div class="panel-head">
+                <h3>Upcoming Play Sessions</h3>
+                <button class="btn btn-soft" onclick="openBooking()">Book Another</button>
+              </div>
+              <div class="booking-row">
+                <div>
+                  <b>Thursday · 2:30 PM</b>
+                  <div style="font-size:11px; color:var(--muted)">Aanya + Vihaan (2 Jumpers) · 90 min · Family Loop Pass</div>
+                </div>
+                <div style="display:flex; align-items:center; gap:6px">
+                  <span class="status green">Confirmed</span>
+                  <button class="btn btn-soft" style="padding:4px 8px; font-size:10px" onclick="openBooking({slot:'2:30 PM', jumpers:2})">View Pass</button>
+                </div>
+              </div>
+              <div class="booking-row">
+                <div>
+                  <b>Sunday · 11:30 AM</b>
+                  <div style="font-size:11px; color:var(--muted)">Aanya · 90 min · Standard Arena Jump</div>
+                </div>
+                <div style="display:flex; align-items:center; gap:6px">
+                  <span class="status yellow">Upcoming</span>
+                  <button class="btn btn-soft" style="padding:4px 8px; font-size:10px" onclick="toast('Reminder set for Sunday session.')">Reminder</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" id="pass-usage">
+              <div class="panel-head">
+                <h3>Pass Balance Snapshot</h3>
+                <a class="btn btn-soft" href="passes.html">Pass Details</a>
+              </div>
+              <div style="display:flex; align-items:center; gap:18px">
+                <div style="width:90px; height:90px; border-radius:50%; border:10px solid var(--accent2); display:grid; place-items:center; font:800 22px Manrope; flex-shrink:0">
+                  60%
+                </div>
+                <div>
+                  <b>Family Loop (10-Visits)</b>
+                  <p style="margin:3px 0; color:var(--muted); font-size:12px">4 redeemed · 6 remaining</p>
+                  <span class="status green">Valid until 14 Dec 2026</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- USAGE TABLE -->
+          <section class="panel" style="margin-top:16px">
+            <div class="panel-head">
+              <h3>Pass Usage History</h3>
+              <span class="status green">Active</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Child / Jumpers</th>
+                    <th>Session Slot</th>
+                    <th>Status</th>
+                    <th>Remaining</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>29 Sep 2026</td>
+                    <td>Aanya Sharma</td>
+                    <td>4:00 PM (90 min)</td>
+                    <td><span class="status green">Completed</span></td>
+                    <td><b>6</b></td>
+                  </tr>
+                  <tr>
+                    <td>21 Sep 2026</td>
+                    <td>Vihaan Sharma</td>
+                    <td>2:30 PM (90 min)</td>
+                    <td><span class="status green">Completed</span></td>
+                    <td><b>7</b></td>
+                  </tr>
+                  <tr>
+                    <td>15 Sep 2026</td>
+                    <td>Aanya + Vihaan</td>
+                    <td>11:30 AM (90 min)</td>
+                    <td><span class="status green">Completed</span></td>
+                    <td><b>8</b></td>
+                  </tr>
+                  <tr>
+                    <td>07 Sep 2026</td>
+                    <td>Aanya Sharma</td>
+                    <td>5:30 PM (90 min)</td>
+                    <td><span class="status green">Completed</span></td>
+                    <td><b>9</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- CHILDREN PROFILES & NOTIFICATIONS -->
+          <div class="dash-grid">
+            <section class="panel" id="my-children">
+              <div class="panel-head">
+                <h3>My Children Profiles</h3>
+                <button class="btn btn-soft" onclick="toast('Child profile dialog opened.')">＋ Add Child</button>
+              </div>
+              <div class="booking-row">
+                <div>
+                  <b>Aanya Sharma</b>
+                  <div style="font-size:11px; color:var(--muted)">8 years · Airbound & Ninja Track · Socks saved</div>
+                </div>
+                <span class="status green">Waiver Active</span>
+              </div>
+              <div class="booking-row">
+                <div>
+                  <b>Vihaan Sharma</b>
+                  <div style="font-size:11px; color:var(--muted)">5 years · Cloud Club & Little Loop · Socks saved</div>
+                </div>
+                <span class="status green">Waiver Active</span>
+              </div>
+            </section>
+
+            <section class="panel" id="notifications-area">
+              <div class="panel-head">
+                <h3>Notifications</h3>
+                <span class="status yellow">2 New</span>
+              </div>
+              <div class="booking-row">
+                <div>
+                  <b>Sunday Session Reminder</b>
+                  <div style="font-size:11px; color:var(--muted)">Your 11:30 AM booking is coming up. Please arrive by 11:15 AM.</div>
+                </div>
+              </div>
+              <div class="booking-row">
+                <div>
+                  <b>Birthday Enquiry Update</b>
+                  <div style="font-size:11px; color:var(--muted)">Our event coordinator confirmed your preferred party slot for Vihaan.</div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modal" onclick="if(event.target===this)closeModal()">
+      <div class="modal" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
